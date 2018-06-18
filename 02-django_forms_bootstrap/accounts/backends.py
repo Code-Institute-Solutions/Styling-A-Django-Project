@@ -26,9 +26,9 @@ class EmailAuth:
         """
         
         try:
-            user = User.onjects.get(pk=user_id)
+            user = User.objects.get(pk=user_id)
 
-            if user.is_valid():
+            if user.is_active:
                 return user
 
             return None
